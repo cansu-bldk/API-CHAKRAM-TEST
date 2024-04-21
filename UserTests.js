@@ -4,7 +4,7 @@ const chakram = require('chakram'),
 describe("User Tests", function () {
 
     it("GET /v2/user/{userName}", function () {
-        const response = chakram.get("https://petstore.swagger.io/v2/user/testqa1234");
+        const response = chakram.get("https://petstore.swagger.io/v2/user/cansu123");
         expect(response).to.have.status(200);
         return chakram.wait();
     });
@@ -16,7 +16,7 @@ describe("User Tests", function () {
     });
 
     it("GET /v2/user/login", function () {
-        const response = chakram.get("https://petstore.swagger.io/v2/user/login?username=test&password=123");
+        const response = chakram.get("https://petstore.swagger.io/v2/user/login?username=test&password=1234567");
         expect(response).to.have.status(200);
         return chakram.wait();
     });
@@ -60,7 +60,7 @@ describe("User Tests", function () {
             "userStatus": 0
           };
 
-        const response = chakram.put("https://petstore.swagger.io/v2/user/testcan123", data);
+        const response = chakram.put("https://petstore.swagger.io/v2/user/ahmet58", data);
         
         return response.then(function (res){
             // console.log(res.body);
@@ -69,7 +69,7 @@ describe("User Tests", function () {
     });
 
     it("DELETE /v2/user/{username}", function () {
-        const response = chakram.delete("https://petstore.swagger.io/v2/user/testcan123");
+        const response = chakram.delete("https://petstore.swagger.io/v2/user/ahmet58");
         expect(response).to.have.status(200);
         return chakram.wait();
     });
